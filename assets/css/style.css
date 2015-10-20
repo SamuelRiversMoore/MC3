@@ -1,7 +1,18 @@
+@import url(https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic);
 
 /*----------  Site ----------*/
 
-
+.cf:before,
+.cf:after {
+  content:"";
+  display:table;
+}
+.cf:after {
+  clear:both;
+}
+.cf {
+  zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
 *, *:before, *:after {
     margin: 0;
     padding: 0;
@@ -16,23 +27,22 @@ footer, header, hgroup, main, nav, section, summary {
 }
 
 body, html {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 19px;
 }
 html {
     height: 100%;
-    font-family: "HK Grotestk", arial, sans-serif;
+    font-family: "Karla", arial, sans-serif;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
 body {
-    margin: 0 auto;
+    margin: 0;
     color: #222;
-    font-family: "HK Grotestk", arial, sans-serif;
+    font-family: "Karla", arial, sans-serif;
     background: #FFF;
 }
 main{
-    background: #FFF;
     padding: 3rem 2rem;
     margin: 5rem auto;
     position: relative;
@@ -40,22 +50,104 @@ main{
     max-width: 900px;
 }
 
+/*----------  Grid ----------*/
+.grid-2>div {
+	width: 50%;
+	float: left;
+	padding: 30px;
+}
+
+/*----------  Typo ----------*/
+a {
+	color: inherit;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a {
+	text-decoration: none;
+}
+h3 {
+	font-size: 30px;
+	line-height: 36px;
+	margin-bottom: 18px;
+}
+h4 {
+	font-size: 16px;
+	line-height: 19px;
+}
+.strong {
+	font-weight: 900;
+}
+.discret {
+	color: #aaa;
+}
 
 /*----------  Menu ----------*/
 
 
 #menu{
-    width: 320px;
-    background: yellow;
-    position: fixed;
-    height: 100%;
+	width: 320px;
+	background: #FBB040;
+	position: fixed;
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	color: #0008FF;
+}
+#menu-logo img {
+	display: block;
+}
+#menu a {
+	text-decoration: none;
+}
+#menu ul, #menu li {
+	list-style-type: none;
+}
+#menu-logo{
+	background-color: #fff;
+}
+#menu-annexe {
+	margin: 0 20px;
+}
+#menu-annexe li {
+	float: left;
+	font-size: 12px;
+	line-height: 24px;
+	margin-right: 10px;
+}
+#menu-annexe li:last-child {
+	float: right;
+	margin: 0;
+}
+#menu-principal>li {
+	font-size: 24px;
+	line-height: 48px;
+	border-top: 1px solid;
+	margin: 0px 20px;
 }
 
+/* -------- Contenu --------*/
 #contenu{
-    background: #EFEFEF;
-    display: block;
-    margin-left: 320px;
+	display: block;
+	margin-left: 320px;
 }
 
+/*----------  Home ----------*/
+#welcome-map {
+	height: 400px;
+}
+#presentation {
+	background-color: #FFF;
+	padding: 30px;
+	margin-top: -100px;
+	position: relative;
+	margin-bottom: 30px;
+	border: 10px solid #FBB040;
+	color: #FBB040;
+}
+#journal>li, #mises-a-jour>li {
+	list-style-type: none;
+}
 
+#journal>li {
+	margin-bottom: 30px;
+}
 

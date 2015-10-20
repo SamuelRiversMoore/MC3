@@ -1,1 +1,1 @@
-<?php include('vues/home.html'); ?>
+<?php include('vues/home.php'); ?>
