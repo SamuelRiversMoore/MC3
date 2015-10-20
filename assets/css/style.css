@@ -1,0 +1,61 @@
+
+/*----------  Site ----------*/
+
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, nav, section, summary {
+    display: block;
+}
+
+body, html {
+    font-size: 18px;
+    line-height: 24px;
+}
+html {
+    height: 100%;
+    font-family: "HK Grotestk", arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+body {
+    margin: 0 auto;
+    color: #222;
+    font-family: "HK Grotestk", arial, sans-serif;
+    background: #FFF;
+}
+main{
+    background: #FFF;
+    padding: 3rem 2rem;
+    margin: 5rem auto;
+    position: relative;
+    min-width: 300px;
+    max-width: 900px;
+}
+
+
+/*----------  Menu ----------*/
+
+
+#menu{
+    width: 320px;
+    background: yellow;
+    position: fixed;
+    height: 100%;
+}
+
+#contenu{
+    background: #EFEFEF;
+    display: block;
+    margin-left: 320px;
+}
+
+
+
