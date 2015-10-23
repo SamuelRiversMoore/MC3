@@ -5,7 +5,8 @@
 		<div id="welcome-map"></div>
 		<div class="wrapper grid-2 cf">
 			<div>
-				<ul id="journal">
+				<ul id="journal" class="liste-articles">
+					<h5>— Journal</h5>
 					<li class="billet cf">
 						<img src="assets/images/conference.jpg">
 						<h4><a href="#">Med Green Forum</a></h4>
@@ -16,11 +17,6 @@
 						<img src="assets/images/manif-climat.jpg">
 						<h4><a href="#">First MC3 Workshop — Report</a></h4>
 						<p class="big"><a href="#">Les premières rencontres du réseau Mediteranean Cities and Climate Change ont eu lieu les 2 et 3 juin à Marseille. Dix pays étaient présents représentant une vingtaine d’institutions.</p>
-						<p class="discret">— 28 août, par <a href="#">Federica Gatta</a></p>
-					</li>
-					<li class="billet cf">
-						<h4><a href="#">Compte-rendu du Sommet Mondial "Climat et Territoires, la société en mouvement"</a></h4>
-						<p class="big">Med Green Forum is a World Renewable Energy Congress and Network Forum aimed at the international community as well as Mediterranean countries.</p>
 						<p class="discret">— 28 août, par <a href="#">Federica Gatta</a></p>
 					</li>
 					<li class="billet cf">
@@ -36,16 +32,35 @@
 					<p class="big strong">Un réseau de recherche sur le pourtour méditerranéen — Le réseau MC3, pour Mediterranean Cities and Climate Change, rassemble des organismes du pourtour méditerranéen - institutions de recherche, observatoires, structures opérationnelles... -, dédiés d’une part à la conception, la planification ou la gestion urbaine, d’autre part à la mesure et à l’étude du climat et de ses variations, spécifiquement en milieu urbain.</p>
 				</div>
 				<div class="grid-2">
-					<div></div>
+					<div>
+						<ul id="news" class="liste-articles">
+							<h5>— Nouvelles</h5>
+							<li class="billet cf">
+								<h4><a href="#">Compte-rendu du Sommet Mondial "Climat et Territoires, la société en mouvement"</a></h4>
+								<p class="">Med Green Forum is a World Renewable Energy Congress and Network Forum aimed at the international community as well as Mediterranean countries.</p>
+								<p class="discret">— 28 août, par <a href="#">Federica Gatta</a></p>
+							</li>
+							<li class="billet cf">
+								<h4><a href="#">Rencontres à Marseille</a></h4>
+								<p class="">Med Green Forum is a World Renewable Energy Congress and Network Forum aimed at the international community as well as Mediterranean countries.</p>
+								<p class="discret">— 28 août, par <a href="#">Federica Gatta</a></p>
+							</li>
+							<li class="billet cf">
+								<h4><a href="#">Une belle courbe des températures</a></h4>
+								<p class="">Med Green Forum is a World Renewable Energy Congress and Network Forum aimed at the international community as well as Mediterranean countries.</p>
+								<p class="discret">— 28 août, par <a href="#">Federica Gatta</a></p>
+							</li>
+						</ul>
+					</div>
 					<div>
 						<ul id="mises-a-jour">
-							<h4>Dernières mises à jour du site</h4>
-							<li>01.09.15 — <a href="#">Goa : verte jaune rouge</a> <span class="discret">> Projet</span>
-							<li>13.08.15 — <a href="#">Valence</a> <span class="discret">> Ville</span>
-							<li>09.07.15 — <a href="#">Coulée verte</a> <span class="discret">> Lexique</span>
-							<li>01.09.15 — <a href="#">Goa : verte jaune rouge</a> <span class="discret">> Projet</span>
-							<li>13.08.15 — <a href="#">Valence</a> <span class="discret">> Ville</span>
-							<li>09.07.15 — <a href="#">Coulée verte</a> <span class="discret">> Lexique</span>
+							<h5>— Articles mis à jour</h5>
+							<li><span class="discret">01.09.15 — Projet</span><br><a href="#">Goa : verte jaune rouge</a>
+							<li><span class="discret">01.09.15 — Ville</span><br><a href="#">Valence</a>
+							<li><span class="discret">01.09.15 — Lexique</span><br><a href="#">Coulée verte</a>
+							<li><span class="discret">01.09.15 — Projet</span><br><a href="#">Goa : verte jaune rouge</a>
+							<li><span class="discret">01.09.15 — Ville</span><br><a href="#">Valence</a>
+							<li><span class="discret">01.09.15 — Lexique</span><br><a href="#">Coulée verte</a>
 						</ul>
 					</div>
 				</div>

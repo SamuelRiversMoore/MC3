@@ -87,13 +87,13 @@ h5 {
 	font-size: 12px;
 	line-height: 14.4px;
 	font-weight: normal;
-	margin: 18px 0 3px 0;
+	margin: 18px 0 12px 0;
 }
 .strong {
 	font-weight: 900;
 }
 .discret {
-	color: #FBB040;
+	color: #FFDB16;
 	font-family: 'Inconsolata';
 }
 .big {
@@ -106,12 +106,12 @@ h5 {
 
 #menu{
 	width: 320px;
-	background: #FBB040;
+	background: #4345FF;
 	position: fixed;
 	height: 100%;
 	overflow-y: auto;
 	overflow-x: hidden;
-	color: #0008FF;
+	color: #FFF;
 }
 #menu-logo img {
 	display: block;
@@ -159,31 +159,31 @@ h5 {
 	padding: 30px;
 }
 #presentation {
-	background-color: #FFF;
+	background-color: #FFDB16;
 	padding: 30px;
 	position: relative;
 	margin-bottom: 30px;
-	border: 10px solid #FBB040;
-	color: #FBB040;
+	/*border: 10px solid #4345FF;
+	color: #4345FF;*/
 	margin-top: -50px;
 }
-#journal>li, #mises-a-jour>li {
+.liste-articles>li, #mises-a-jour>li {
 	list-style-type: none;
 }
 
-#journal>li {
-	margin-bottom: 60px;
+.liste-articles>li {
+	margin-bottom: 48px;
 }
-#journal .billet>img {
+.liste-articles .billet>img {
 	width: 180px;
 	float: left;
 	margin-right: 30px;
 }
-#journal .billet>h4 {
+.liste-articles .billet>h4 {
 	text-transform: uppercase;
 }
 
-#journal .billet p a {
+.liste-articles .billet p a {
 	text-decoration: none;
 }
 
@@ -256,4 +256,7 @@ h5 {
 }
 #inventaire-tabs>div:first-of-type {
 	display: block;
+}
+#inventaire-carte {
+	height: 300px;
 }

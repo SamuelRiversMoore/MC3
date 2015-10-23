@@ -6,6 +6,16 @@ $( document ).ready(function() {
 			container: 'welcome-map', // container id
 			style: 'mapbox://styles/mapbox/streets-v8', //stylesheet location
 			center: [19, 38.5], // starting position
+			zoom: 3.5, // starting zoom
+			interactive: false
+		});
+	}
+	
+	if($("#inventaire-carte").length) {
+		var map = new mapboxgl.Map({
+			container: 'inventaire-carte', // container id
+			style: 'mapbox://styles/mapbox/streets-v8', //stylesheet location
+			center: [19, 38.5], // starting position
 			zoom: 3.5 // starting zoom
 		});
 	}

@@ -50,6 +50,10 @@
 			<div id="tab-3">tab 3</div>
 		</div>
 	</div>
+	
+	<div id="inventaire-carte">
+		
+	</div>
 </div>
 
 <?php include('includes/footer.php'); ?>
