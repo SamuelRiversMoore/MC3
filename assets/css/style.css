@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic|Inconsolata);
 
 /*----------  Site ----------*/
 
@@ -54,7 +54,12 @@ main{
 .grid-2>div {
 	width: 50%;
 	float: left;
-	padding: 30px;
+	padding: 0;
+	padding-right: 15px;
+	min-height: 1px;
+}
+.grid-2>div:last-child {
+	padding-left: 15px;
 }
 
 /*----------  Typo ----------*/
@@ -63,6 +68,11 @@ a {
 }
 h1 a, h2 a, h3 a, h4 a, h5 a {
 	text-decoration: none;
+}
+h1 {
+	font-size: 48px;
+	line-height: 58px;
+	margin: 18px 0;
 }
 h3 {
 	font-size: 30px;
@@ -73,11 +83,22 @@ h4 {
 	font-size: 16px;
 	line-height: 19px;
 }
+h5 {
+	font-size: 12px;
+	line-height: 14.4px;
+	font-weight: normal;
+	margin: 18px 0 3px 0;
+}
 .strong {
 	font-weight: 900;
 }
 .discret {
-	color: #aaa;
+	color: #FBB040;
+	font-family: 'Inconsolata';
+}
+.big {
+	font-size: 21px;
+	line-height: 26px;
 }
 
 /*----------  Menu ----------*/
@@ -134,20 +155,105 @@ h4 {
 #welcome-map {
 	height: 400px;
 }
+.wrapper {
+	padding: 30px;
+}
 #presentation {
 	background-color: #FFF;
 	padding: 30px;
-	margin-top: -100px;
 	position: relative;
 	margin-bottom: 30px;
 	border: 10px solid #FBB040;
 	color: #FBB040;
+	margin-top: -50px;
 }
 #journal>li, #mises-a-jour>li {
 	list-style-type: none;
 }
 
 #journal>li {
-	margin-bottom: 30px;
+	margin-bottom: 60px;
+}
+#journal .billet>img {
+	width: 180px;
+	float: left;
+	margin-right: 30px;
+}
+#journal .billet>h4 {
+	text-transform: uppercase;
 }
 
+#journal .billet p a {
+	text-decoration: none;
+}
+
+/*------------ Inventaire -------------*/
+#arbo a {
+	text-decoration: none;
+	font-weight: bold;
+}
+#inventaire-introduction {
+	max-width: 610px;
+}
+.slider {
+	margin: 12px 0 48px 0;
+	cursor: grab;
+}
+.slick-slide img {
+	max-height: 500px;
+	width: auto;
+	margin: 0px 30px;
+}
+.slick-slide.slick-active img {
+	filter: none;
+  -webkit-filter: grayscale(0);
+	opacity: 1;
+}
+.slider-arrow-left {
+	position: absolute;
+	top: 50%;
+	margin-top: -21px;
+	left: 10px;
+	z-index: 999;
+	cursor: pointer;
+}
+.slider-arrow-right {
+	position: absolute;
+	top: 50%;
+	margin-top: -21px;
+	right: 10px;
+	z-index: 999;
+	cursor: pointer;
+}
+/*------------ Tabs -------------*/
+#inventaire-tabs {
+	position: relative;
+	margin: 6px 0 48px 0;
+}
+#inventaire-tabs>ul {
+	width: 280px;
+	position: absolute;
+	top: 6px;
+	left: 0;
+}
+#inventaire-tabs>ul>li {
+	list-style-type: none;
+	border-top: 1px solid;
+	padding: 12px 0px;
+	font-size: 18px;
+	line-height: 21px;
+}
+#inventaire-tabs>ul>li.selected {
+	font-weight: bold;
+}
+#inventaire-tabs>ul>li>a {
+	text-decoration: none;
+}
+#inventaire-tabs>div {
+	margin-left: 310px;
+	display: none;
+	max-width: 650px;
+}
+#inventaire-tabs>div:first-of-type {
+	display: block;
+}

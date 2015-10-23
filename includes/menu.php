@@ -8,9 +8,9 @@
 		<li>Crédits</li>
 	</ul>
 	<ul id="menu-principal">
-		<li><a href="#">Accueil</a></li>
-		<li><a href="#">Actualités</a></li>
-		<li class="strong"><a href="#">Inventaire</a></li>
+		<li><a href="index.php">Accueil</a></li>
+		<li><a href="#">Journal</a></li>
+		<li class="strong"><a href="inventaire.php">Inventaire</a></li>
 		<li class="strong"><a href="#">Synthèses</a></li>
 		<li class="strong"><a href="#">Lexique</a></li>
 		<li><a href="#">Membres & Partenaires</a></li>
