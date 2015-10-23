@@ -56,4 +56,39 @@
 	</div>
 </div>
 
+
+<script type="text/javascript">
+	var geojson = {
+        "type": "geojson",
+        "data": {
+            "type": "FeatureCollection",
+            "features": [{
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [2.166667, 41.383333],
+                },
+                "properties": {
+                    "title": "Barcelone",
+                    "marker-symbol": "monument",
+                    url: 'http://en.wikipedia.org/'
+                }
+            }, {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [12.3319, 45.4398]
+                },
+                "properties": {
+                    "title": "Venise",
+                    "marker-symbol": "harbor",
+                    url: 'http://en.wikipedia.org/'
+                }
+            }]
+        }
+    }
+</script>
+
+
+
 <?php include('includes/footer.php'); ?>
