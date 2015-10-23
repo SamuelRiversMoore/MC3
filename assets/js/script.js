@@ -14,9 +14,9 @@ $( document ).ready(function() {
 		});
 	}
 	
-	if($("#inventaire-carte").length) {
+	if($("#inventaire-mapbox").length) {
 		var map = new mapboxgl.Map({
-			container: 'inventaire-carte', // container id
+			container: 'inventaire-mapbox', // container id
 			style: 'mapbox://styles/mapbox/streets-v8', //stylesheet location
 			center: [19, 38.5], // starting position
 			zoom: 3.5 // starting zoom
@@ -72,9 +72,9 @@ map.on('mousemove', function (e) {
 		dots: true,
 		infinite: true,
 		speed: 300,
-		slidesToShow: 1,
-		centerMode: true,
-		variableWidth: true,
+		//slidesToShow: 1,
+		//centerMode: true,
+		//variableWidth: true,
 		prevArrow: '<img class="slider-arrow-left" src="assets/images/arrow-left.png">',
 		nextArrow: '<img class="slider-arrow-right" src="assets/images/arrow-right.png">'
 	});

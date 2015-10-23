@@ -12,7 +12,7 @@
 		<li><a href="#">Journal</a></li>
 		<li class="strong"><a href="inventaire.php">Inventaire</a></li>
 		<li class="strong"><a href="#">Synthèses</a></li>
-		<li class="strong"><a href="#">Lexique</a></li>
+		<li class="strong"><a href="lexique.php">Lexique</a></li>
 		<li><a href="#">Membres & Partenaires</a></li>
 		<li><a href="#">À propos</a></li>
 	</ul>

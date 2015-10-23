@@ -5,23 +5,25 @@
 	<div id="arbo"><a href="#">MC3</a> > <a href="#">Inventaire</a> > <a href="#">Espagne</a> > <a href="#">Valence</a> > <span class="arbo-current-page">Sociopolis</span></div>
 	<h1>Sociopolis</h1>
 
-	<div id="inventaire-introduction">
-		<h5>— Introduction</h5>
-		<p>Projet de réhabilitation urbaine de la darse intérieure du port inséré dans le programme d’aménagement du littoral de Valencia.</p>
-	</div>
+	<div id="inventaire-introduction-wrapper" class="cf">
+		<div id="inventaire-introduction">
+			<h5>— Introduction</h5>
+			<p>Projet de réhabilitation urbaine de la darse intérieure du port inséré dans le programme d’aménagement du littoral de Valencia.</p>
+		</div>
 
-	<div id="inventaire-images">
-		<h5>— Images</h5>
-		<div class="slider">
-			<div><img src="assets/images/slide-1.jpg"></div>
-			<div><img src="assets/images/slide-2.jpg"></div>
-			<div><img src="assets/images/slide-3.jpg"></div>
+		<div id="inventaire-images">
+			<h5>— Images</h5>
+			<div class="slider">
+				<div style="background:url('assets/images/slide-1.jpg')"></div>
+				<div style="background:url('assets/images/slide-2.jpg')"></div>
+				<div style="background:url('assets/images/slide-3.jpg')"></div>
+			</div>
 		</div>
 	</div>
 	
 	<div id="inventaire-thematiques">
 		<h5>— Thématiques</h5>
-		<div id="inventaire-tabs">
+		<div id="inventaire-tabs" class="cf">
 			<ul>
 				<li><a href="#tab-1">Temporalités</a></li>
 				<li><a href="#tab-2">Relation au changement climatique</a></li>
@@ -52,7 +54,8 @@
 	</div>
 	
 	<div id="inventaire-carte">
-		
+		<h5>— Thématiques</h5>
+		<div id="inventaire-mapbox"></div>
 	</div>
 </div>
 
