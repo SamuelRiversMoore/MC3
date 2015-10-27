@@ -15,8 +15,11 @@
 		<!-- Mapbox -->
 		<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.11.1/mapbox-gl.js'></script>
 		<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.11.1/mapbox-gl.css' rel='stylesheet' />
+		<!-- Sorttable -->
+		<script type="text/javascript" src="assets/js/sorttable.js"></script>
 		<!-- MC3 -->
 		<link rel="stylesheet" href="assets/css/style.css">
 		<script type="text/javascript" src="assets/js/script.js"></script>
+		
 	</head>
 	<body>

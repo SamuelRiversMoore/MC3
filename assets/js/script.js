@@ -21,9 +21,7 @@ $( document ).ready(function() {
 			center: [19, 38.5], // starting position
 			zoom: 3.5 // starting zoom
 		});
-	}
-
-console.log(geojson);
+		console.log(geojson);
 
 
 map.on('style.load', function () {
@@ -44,29 +42,29 @@ map.on('style.load', function () {
         "paint": {
             "text-size": 12
         }
-    });
-});
+    	});
+		});
 
-map.on('click', function(e) {
-    map.featuresAt(e.point, {layer: 'markers', radius: 10, includeGeometry: true}, function (err, features) {
-        if (err) throw err;
-        // if there are features within the given radius of the click event,
-        // fly to the location of the click event
-        if (features.length) {
-            markerUrl = features[0]['properties']['url'];
-            window.location.href = markerUrl;
-        }
-    });
-});
-map.on('mousemove', function (e) {
-    map.featuresAt(e.point, {layer: 'markers', radius: 10}, function (err, features) {
-        if (err) throw err;
-        map.getCanvas().style.cursor = features.length ? "pointer" : "";
-    });
-});
-
-
-/* slickers */
+		map.on('click', function(e) {
+				map.featuresAt(e.point, {layer: 'markers', radius: 10, includeGeometry: true}, function (err, features) {
+						if (err) throw err;
+						// if there are features within the given radius of the click event,
+						// fly to the location of the click event
+						if (features.length) {
+								markerUrl = features[0]['properties']['url'];
+								window.location.href = markerUrl;
+						}
+				});
+		});
+		map.on('mousemove', function (e) {
+				map.featuresAt(e.point, {layer: 'markers', radius: 10}, function (err, features) {
+						if (err) throw err;
+						map.getCanvas().style.cursor = features.length ? "pointer" : "";
+				});
+		});
+	}
+	
+	/* slickers */
 
 	$(".slider").slick({
 		dots: true,
@@ -81,20 +79,23 @@ map.on('mousemove', function (e) {
 	
 	/* tabs */
 	
-	if($("#inventaire-tabs").length) {
-		$('#inventaire-tabs>ul>li>a').click(function(){
-			var selectTab = $(this).attr('href');
-			$('#inventaire-tabs>ul>li').removeClass('selected');
-			$(this).parent('li').addClass('selected');
-			$('#inventaire-tabs>div').hide();
-			$('#inventaire-tabs>div'+selectTab).show();
+	if($(".tabs-wrapper").length) {
+		$(".tabs-wrapper").each(function() {
+			var tabs = $(this);
+			tabs.find('ul>li>a').click(function(){
+				var selectTab = $(this).attr('href');
+				tabs.find('ul>li').removeClass('selected');
+				$(this).parent('li').addClass('selected');
+				tabs.children('div').hide();
+				tabs.children('div'+selectTab).show();
+			})
+			if(window.location.hash.substring(0, 5) == "#tab-") {
+				var tabNum = parseInt(window.location.hash.substring(5)) - 1;
+				tabs.find('ul>li').eq(tabNum).children('a').click();
+			} else {
+				//tabs.find('ul>li').first().children('a').click();
+			}
 		})
-		if(window.location.hash.substring(0, 5) == "#tab-") {
-			var tabNum = parseInt(window.location.hash.substring(5)) - 1;
-			$("#inventaire-tabs>ul>li").eq(tabNum).children('a').click();
-			console.log($("#inventaire-tabs>ul>li").eq(tabNum).children('a'))
-		} else {
-			//$("#inventaire-tabs>ul>li").first().children('a').click();
-		}
+		
 	}
 });

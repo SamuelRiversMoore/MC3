@@ -32,29 +32,25 @@
 		</div>
 		<div id="lexique-mots">
 			<h1>A</h1>
-			<a title="Atmosfere" href="spip.php?mot8">Atmosfere</a>
-			<a title="Acceptabilité" href="spip.php?mot19">Acceptabilité</a>
-			<a title="Adaptación" href="spip.php?mot20">Adaptación</a>
-			<a title="Adaptabilité" href="spip.php?mot21">Adaptabilité</a>
-			<a title="Accesibilidad universal" href="spip.php?mot22">Accesibilidad universal</a>
-			<a title="Accesibilidad urbana" href="spip.php?mot23">Accesibilidad urbana</a>
-			<a title="Agenda Local 21" href="spip.php?mot24">Agenda Local 21</a>
-			<a title="Antropogénico" href="spip.php?mot26">Antropogénico</a>
-			<a title="Arquitectura Bioclimática" href="spip.php?mot28">Arquitectura Bioclimática</a>
-			<a title="Arquitectura solar pasiva" href="spip.php?mot29">Arquitectura solar pasiva</a>
-			<a title="Arquitectura Solar Activa" href="spip.php?mot30">Arquitectura Solar Activa</a>
-			<a title="Arquitectura Sostenible" href="spip.php?mot31">Arquitectura Sostenible</a>
-			<div class="lexique-wrapper" id="definition-atmosphere">
-				<a title="Atmosphère" href="#definition-atmosphere" class="lexique-titre active">Atmosphère</a>
+			<?php
+			$mots = explode(',', "Albédo,Atmosfere,Acceptabilité,Adaptación,Adaptabilité,Accesibilidad universal,Accesibilidad urbana,Agenda Local 21,Antropogénico,Arquitectura Bioclimática,Arquitectura solar pasiva,Arquitectura Solar Activa,Arquitectura Sostenible,Atmosphère,Artificialisation,Atténuation (Mitigation),Atmósfera");
+			foreach ($mots as $key=>$mot) :
+			?>
+			<div id="mot-<?= $key ?>" class="lexique-wrapper">
+				<a title="<?= $mot ?>" href="#mot-<?= $key ?>" class="lexique-titre"><?= $mot ?></a>
 				<div class="lexique-voisins">
-					<p>Mot(s) voisin(s): <a href="#definition-atmosfere">Atmosfere (es)</a>, <a href="#definition-atmosfere">Atmosfire (it)</a></p>
+					<p>Mot(s) voisin(s): <a href="#mot-1">Atmosfere (es)</a>, <a href="#mot-6">Atmosfire (it)</a></p>
 				</div>
 				<div class="lexique-definition">
-					<div class="discret">GIEC, 2013, Atmosphère :</div>Enveloppe gazeuse de la Terre. L’atmosphère sèche est composée presque entièrement d’azote (rapport de mélange en volume de 78,1 %) et d’oxygène (rapport de mélange en volume de 20,9 %) ainsi que d’un certain nombre de gaz présents à l’état de trace, tels que l’argon (rapport de mélange en volume de 0,93 %), l’hélium et des gaz à effet de serre qui influent sur le rayonnement, notamment le dioxyde de carbone (rapport de mélange en volume de 0,035 %) et l’ozone. En outre, l’atmosphère contient de la vapeur d’eau, gaz à effet de serre, en proportion très variable, mais généralement dans un rapport de mélange en volume d’environ 1 %. L’atmosphère contient également des nuages et des aérosols.</div>
+					<p class="discret">GIEC, 2013, Atmosphère :</p>
+					<?= file_get_contents('http://loripsum.net/api/1/medium') ?>
+				</div>
+				<div class="lexique-definition">
+					<p class="discret">CLAC, 2017, Atmosphère :</p>
+					<?= file_get_contents('http://loripsum.net/api/1/medium') ?>
+				</div>
 			</div>
-			
-			<a title="Artificialisation" href="spip.php?mot32">Artificialisation</a>
-			<a title="Atténuation (Mitigation)" href="spip.php?mot33">Atténuation (Mitigation)</a>
+			<?php endforeach; ?>
 		</div>
 	</div>
 

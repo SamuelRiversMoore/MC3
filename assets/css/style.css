@@ -265,29 +265,29 @@ ul.liste-lettres {
 	cursor: pointer;
 }
 /*------------ Tabs -------------*/
-#inventaire-tabs {
+.tabs-wrapper {
 	position: relative;
 	margin: 6px 0 48px 0;
 }
-#inventaire-tabs>ul {
+.tabs-wrapper>ul {
 	width: 280px;
 	float: left;
 	margin: 0;
 }
-#inventaire-tabs>ul>li {
+.tabs-wrapper>ul>li {
 	list-style-type: none;
 	border-top: 1px solid;
 	padding: 12px 0px;
 	font-size: 18px;
 	line-height: 21px;
 }
-#inventaire-tabs>ul>li.selected {
+.tabs-wrapper>ul>li.selected {
 	font-weight: bold;
 }
-#inventaire-tabs>ul>li>a {
+.tabs-wrapper>ul>li>a {
 	text-decoration: none;
 }
-#inventaire-tabs>div {
+.tabs-wrapper>div {
 	margin-left: 310px;
 	display: none;
 	max-width: 650px;
@@ -335,23 +335,74 @@ ul.liste-lettres {
 	margin-top: 36px;
 	max-width: 660px;
 }
-#lexique-mots>a, #lexique-mots .lexique-titre {
+.lexique-wrapper>div{
+	display: none;
+}
+.lexique-wrapper:target>div{
+	display: block;
+}
+.lexique-wrapper .lexique-titre {
 	display: block;
 	font-size: 18px;
 	line-height: 21px;
 	text-decoration: none;
 }
-#lexique-mots .lexique-titre.active {
+.lexique-wrapper:target .lexique-titre {
 	font-size: 24px;
 	line-height: 36px;
 	font-weight: bold;
 	margin-top: 12px;
 }
-#lexique-mots .lexique-definition {
+.lexique-wrapper .lexique-definition {
 	margin-left: 24px;
 	margin-bottom: 24px;
 }
-#lexique-mots .lexique-voisins {
+.lexique-wrapper .lexique-voisins {
 	margin-bottom: 24px;
 	font-size: 12px;
+}
+
+/*--------------- Reseaux -------------*/
+#reseaux .tabs-wrapper > div {
+    margin-left: 310px;
+    display: none;
+    max-width: none;
+}
+#reseaux .bloc-membre {
+    width: 280px;
+    margin: 0 30px 30px 0;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/*-------------- Table membres ------------*/
+table {
+	border-collapse: collapse;
+}
+table thead {
+    background-color: #FFDB16;
+    text-align: left;
+}
+table th {
+	padding: 6px;
+	cursor: pointer;
+}
+table th:last-child {
+	text-align: right;
+}
+table tr {
+    padding: 0px;
+    border-bottom: 1px solid #FFDB16;
+}
+table td {
+    padding: 5px;
+    vertical-align: top;
+}
+table td:first-child {
+    white-space: nowrap;
+    font-weight: bold;
+    padding-left: 0px;
+}
+table td:last-child {
+    text-align: right;
 }

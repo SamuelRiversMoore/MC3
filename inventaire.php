@@ -23,7 +23,7 @@
 	
 	<div id="inventaire-thematiques">
 		<h5>— Thématiques</h5>
-		<div id="inventaire-tabs" class="cf">
+		<div id="inventaire-tabs" class="tabs-wrapper cf">
 			<ul>
 				<li><a href="#tab-1">Temporalités</a></li>
 				<li><a href="#tab-2">Relation au changement climatique</a></li>
