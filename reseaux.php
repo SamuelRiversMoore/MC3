@@ -16,6 +16,7 @@
 			</ul>
 			<div id="tab-1">
 				<table class="sortable">
+					<!-- Penser à ajouter un lien mail quand on clique su le nom -->
 					<thead>
 						<tr class="row_first">
 							<th>Nom complet</th>
