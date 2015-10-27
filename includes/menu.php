@@ -1,6 +1,6 @@
 <div id="menu">
 	<div id="menu-logo">
-		<img src="assets/images/logo-mc3-2.svg" width="320" height="95px">
+		<a href="/mc3/"><img src="assets/images/logo-mc3-2.svg" width="320" height="95px"></a>
 	</div>
 	<ul id="menu-annexe" class="cf">
 		<li><a href="#">FR</a></li>

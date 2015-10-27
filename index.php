@@ -29,7 +29,7 @@
 			</div>
 			<div>
 				<div id="presentation">
-					<p class="big strong">Un réseau de recherche sur le pourtour méditerranéen — Le réseau MC3, pour Mediterranean Cities and Climate Change, rassemble des organismes du pourtour méditerranéen - institutions de recherche, observatoires, structures opérationnelles... -, dédiés d’une part à la conception, la planification ou la gestion urbaine, d’autre part à la mesure et à l’étude du climat et de ses variations, spécifiquement en milieu urbain.</p>
+					<p class="big strong">Le réseau MC3, pour Mediterranean Cities and Climate Change, rassemble des organismes du pourtour méditerranéen — institutions de recherche, observatoires, structures opérationnelles... — dédiés d’une part à la conception, la planification ou la gestion urbaine, d’autre part à la mesure et à l’étude du climat et de ses variations, spécifiquement en milieu urbain.</p>
 				</div>
 				<div class="grid-2">
 					<div>

@@ -79,6 +79,8 @@ map.on('mousemove', function (e) {
 		nextArrow: '<img class="slider-arrow-right" src="assets/images/arrow-right.png">'
 	});
 	
+	/* tabs */
+	
 	if($("#inventaire-tabs").length) {
 		$('#inventaire-tabs>ul>li>a').click(function(){
 			var selectTab = $(this).attr('href');
@@ -92,7 +94,7 @@ map.on('mousemove', function (e) {
 			$("#inventaire-tabs>ul>li").eq(tabNum).children('a').click();
 			console.log($("#inventaire-tabs>ul>li").eq(tabNum).children('a'))
 		} else {
-			$("#inventaire-tabs>ul>li").first().children('a').click();
+			//$("#inventaire-tabs>ul>li").first().children('a').click();
 		}
 	}
 });

@@ -44,7 +44,15 @@
 			<a title="Arquitectura solar pasiva" href="spip.php?mot29">Arquitectura solar pasiva</a>
 			<a title="Arquitectura Solar Activa" href="spip.php?mot30">Arquitectura Solar Activa</a>
 			<a title="Arquitectura Sostenible" href="spip.php?mot31">Arquitectura Sostenible</a>
-			<a title="Atmosphère" href="spip.php?mot95">Atmosphère</a>
+			<div class="lexique-wrapper" id="definition-atmosphere">
+				<a title="Atmosphère" href="#definition-atmosphere" class="lexique-titre active">Atmosphère</a>
+				<div class="lexique-voisins">
+					<p>Mot(s) voisin(s): <a href="#definition-atmosfere">Atmosfere (es)</a>, <a href="#definition-atmosfere">Atmosfire (it)</a></p>
+				</div>
+				<div class="lexique-definition">
+					<div class="discret">GIEC, 2013, Atmosphère :</div>Enveloppe gazeuse de la Terre. L’atmosphère sèche est composée presque entièrement d’azote (rapport de mélange en volume de 78,1 %) et d’oxygène (rapport de mélange en volume de 20,9 %) ainsi que d’un certain nombre de gaz présents à l’état de trace, tels que l’argon (rapport de mélange en volume de 0,93 %), l’hélium et des gaz à effet de serre qui influent sur le rayonnement, notamment le dioxyde de carbone (rapport de mélange en volume de 0,035 %) et l’ozone. En outre, l’atmosphère contient de la vapeur d’eau, gaz à effet de serre, en proportion très variable, mais généralement dans un rapport de mélange en volume d’environ 1 %. L’atmosphère contient également des nuages et des aérosols.</div>
+			</div>
+			
 			<a title="Artificialisation" href="spip.php?mot32">Artificialisation</a>
 			<a title="Atténuation (Mitigation)" href="spip.php?mot33">Atténuation (Mitigation)</a>
 		</div>
