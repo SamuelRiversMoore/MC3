@@ -8,19 +8,19 @@
 				<ul id="journal" class="liste-articles">
 					<h5>— Journal</h5>
 					<li class="billet cf">
-						<img src="assets/images/conference.jpg">
+						<img src="assets/images/conference.jpg" class="article-icone">
 						<h4><a href="#">Med Green Forum</a></h4>
 						<p class="big"><a href="#">En amont de la COP21 qui aura lieu à Paris en décembre 2015, le sommet mondial Climat et territoires, la société en mouvement s’est déroulé à Lyon les 2 et 3 juillet 2015. <img src="assets/images/long-arrow-right.png" width="25" height="15"></a></p>
 						<p class="discret">— 28 août, par <a href="#">Federica Gatta</a></p>
 					</li>
 					<li class="billet cf">
-						<img src="assets/images/manif-climat.jpg">
+						<img src="assets/images/manif-climat.jpg" class="article-icone">
 						<h4><a href="#">First MC3 Workshop — Report</a></h4>
 						<p class="big"><a href="#">Les premières rencontres du réseau Mediteranean Cities and Climate Change ont eu lieu les 2 et 3 juin à Marseille. Dix pays étaient présents représentant une vingtaine d’institutions.</p>
 						<p class="discret">— 28 août, par <a href="#">Federica Gatta</a></p>
 					</li>
 					<li class="billet cf">
-						<img src="assets/images/manif-climat.jpg">
+						<img src="assets/images/manif-climat.jpg" class="article-icone">
 						<h4><a href="#">First MC3 Workshop — Report</a></h4>
 						<p class="big"><a href="#">Les premières rencontres du réseau Mediteranean Cities and Climate Change ont eu lieu les 2 et 3 juin à Marseille. Dix pays étaient présents représentant une vingtaine d’institutions. <img src="assets/images/long-arrow-right.png" width="25" height="15"></a></p>
 						<p class="discret">— 28 août, par <a href="#">Federica Gatta</a></p>

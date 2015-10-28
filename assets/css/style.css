@@ -66,6 +66,9 @@ main{
 a {
 	color: inherit;
 }
+a:focus {
+	outline: none;
+}
 h1 a, h2 a, h3 a, h4 a, h5 a {
 	text-decoration: none;
 }
@@ -185,6 +188,7 @@ ul.liste-lettres {
 }
 .wrapper {
 	padding: 30px;
+	position: relative;
 }
 #presentation {
 	background-color: #FFDB16;
@@ -202,10 +206,11 @@ ul.liste-lettres {
 .liste-articles>li {
 	margin-bottom: 48px;
 }
-.liste-articles .billet>img {
+.article-icone {
 	width: 180px;
 	float: left;
 	margin-right: 30px;
+	margin-bottom: 30px;
 }
 .liste-articles .billet>h4 {
 	text-transform: uppercase;
@@ -214,15 +219,24 @@ ul.liste-lettres {
 .liste-articles .billet p a {
 	text-decoration: none;
 }
+ul#news, ul#mises-a-jour, ul#journal {
+	margin: 0;
+}
 
 /*------------ Inventaire -------------*/
+#arbo {
+	font-size: 12px;
+	position: absolute;
+	top: 30px;
+	left: 30px;
+}
 #arbo a {
 	text-decoration: none;
 	font-weight: bold;
 }
 #inventaire-introduction {
 	float: left;
-	width: 280px;
+	width: 290px;
 	margin-right: 30px;
 }
 #inventaire-images {
@@ -268,11 +282,16 @@ ul.liste-lettres {
 .tabs-wrapper {
 	position: relative;
 	margin: 6px 0 48px 0;
+	background-image: url("../images/vagues.png");
 }
 .tabs-wrapper>ul {
-	width: 280px;
+	width: 320px;
 	float: left;
 	margin: 0;
+	background-color: #fff;
+	padding-right: 30px;
+	position: relative;
+	z-index: 9;
 }
 .tabs-wrapper>ul>li {
 	list-style-type: none;
@@ -288,9 +307,10 @@ ul.liste-lettres {
 	text-decoration: none;
 }
 .tabs-wrapper>div {
-	margin-left: 310px;
 	display: none;
-	max-width: 650px;
+	background-color: #FFF;
+	padding-left: 320px;
+	padding-right: calc(100% - 320px - 660px);
 }
 #inventaire-mapbox {
 	height: 300px;
@@ -317,7 +337,6 @@ ul.liste-lettres {
 	text-decoration: none;
 	width: 30px;
 	background-color: #FFDB16;
-	color: #4345FF;
 	text-align: center;
 	height: 30px;
 	line-height: 30px;
@@ -325,10 +344,10 @@ ul.liste-lettres {
 	float: left;
 }
 #lexique-lettres a:hover {
-	border-bottom: 3px solid #4345FF;
+	border-bottom: 3px solid #000;
 }
 #lexique-lettres a.active {
-	background-color: #4345FF;
+	background-color: #000;
 	color: rgb(255, 255, 255);
 }
 #lexique-mots {
@@ -364,15 +383,9 @@ ul.liste-lettres {
 
 /*--------------- Reseaux -------------*/
 #reseaux .tabs-wrapper > div {
-    margin-left: 310px;
+    margin-left: 320px;
     display: none;
     max-width: none;
-}
-#reseaux .bloc-membre {
-    width: 280px;
-    margin: 0 30px 30px 0;
-    display: inline-block;
-    vertical-align: top;
 }
 
 /*-------------- Table membres ------------*/
@@ -405,4 +418,32 @@ table td:first-child {
 }
 table td:last-child {
     text-align: right;
+}
+/*-------------- Journal ------------*/
+section.journal article.extrait a {
+	text-decoration: none;
+}
+section.nouvelles {
+	display: inline-block;
+	width: 290px;
+	vertical-align: top;
+}
+/*-------------- Article ------------*/
+section.journal {
+	display: inline-block;
+	vertical-align: top;
+	max-width: 780px;
+	margin-right: 30px;
+}
+section.journal article p , section.journal article ul, section.journal article iframe {
+	margin-bottom: 12px;
+}
+section.journal article iframe {
+	width: 100%;
+}
+section.journal article .grid-2>div:first-child {
+	width: 195px;
+}
+section.journal article .grid-2>div:last-child {
+	width: calc(100% - 195px);
 }

@@ -9,7 +9,7 @@
 	</ul>
 	<ul id="menu-principal">
 		<li><a href="index.php">Accueil</a></li>
-		<li><a href="#">Journal</a></li>
+		<li><a href="journal.php">Journal</a></li>
 		<li class="strong"><a href="inventaire.php">Inventaire</a></li>
 		<li class="strong"><a href="#">Synthèses</a></li>
 		<li class="strong"><a href="lexique.php">Lexique</a></li>

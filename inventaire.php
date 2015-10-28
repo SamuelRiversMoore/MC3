@@ -21,7 +21,7 @@
 		</div>
 	</div>
 	
-	<div id="inventaire-thematiques">
+	<div id="inventaire-thematiques" class="cf">
 		<h5>— Thématiques</h5>
 		<div id="inventaire-tabs" class="tabs-wrapper cf">
 			<ul>
@@ -55,7 +55,7 @@
 				</div>
 				<!-- .thematique-chapitre se repète pour chaque chapitre de la thématique -->
 				<h5>&nbsp;</h5>
-				<div class="thematique-chapitre" id="chapitre-1">
+				<div class="thematique-chapitre cf" id="chapitre-1">
 					<h2>A. Plans, stratégies, politiques, réglementations</h2>
 					<!-- .thematique-document se repète pour chaque document+description publié.
 					lors de l'ajout d'un document il faut pouvoir lui attribuer un chapitre si besoin.
@@ -98,7 +98,8 @@ El Plan, elaborado por la Oficina Española de Cambio Climático (OECC), fue ado
         "type": "geojson",
         "data": {
             "type": "FeatureCollection",
-            "features": [{
+            "features": 
+						[{
                 "type": "Feature",
                 "geometry": {
                     "type": "Point",

@@ -7,7 +7,7 @@
 	
 	<div id="reseaux">
 		<h5>&nbsp;</h5>
-		<div id="reseaux-tabs" class="tabs-wrapper cf">
+		<div id="reseaux-tabs" class="tabs-wrapper">
 			<ul>
 				<li><a href="#tab-1">Participants aux Premières rencontres du réseau MC3</a></li>
 				<li><a href="#tab-2">Institutions représentées lors des Premières Rencontres du Réseau MC3</a></li>
