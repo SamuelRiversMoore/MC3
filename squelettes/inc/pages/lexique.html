@@ -1,0 +1,33 @@
+<BOUCLE_rubrique(RUBRIQUES){id_rubrique}{tout}>
+  <div id="contenu" class="wrapper">
+		
+		
+		<!-- construction du tableau d'initiales -->
+		[(#SET{tab_initiales,#ARRAY})]
+		<BOUCLE_remplir_tableau(GLOMOTS){par titre}{statut IN publie}>
+		  [(#SET{tab_initiales, #GET{tab_initiales}|push{#TITRE|mb_substr{0,1,'UTF-8'}|strtolower}})]
+		</BOUCLE_remplir_tableau>			
+		[(#SET{tab_initiales, #GET{tab_initiales}|array_unique})]
+
+
+		<B_nav>
+			<nav id="lexique-lettres" class="cf">
+				<BOUCLE_nav(DATA){source tableau,#GET{tab_initiales}}>
+					<a href="##VALEUR">#VALEUR</a>
+				</BOUCLE_nav>
+			</nav>
+		</B_nav>
+			
+		<B_lire_tableau>
+			<div id="lexique-mots">
+				<BOUCLE_lire_tableau(DATA){source tableau,#GET{tab_initiales}}>
+					<h1 id="#VALEUR">#VALEUR</h1>
+						<BOUCLE_mots(GLOMOTS){par titre}{statut=publie}>
+							[(#TITRE|mb_substr{0,1,'UTF-8'}|strtolower|=={#VALEUR}|oui) <INCLURE{fond=inc/pages/lexique/mots, id_glomot}> ]
+						</BOUCLE_mots>
+				</BOUCLE_lire_tableau>
+			</div>
+		</B_lire_tableau>			
+
+	</div>
+</BOUCLE_rubrique>

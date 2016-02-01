@@ -134,7 +134,7 @@ ul.liste-lettres {
 
 #menu{
 	width: 320px;
-	background: #4345FF;
+	background: #4CACF0;
 	position: fixed;
 	height: 100%;
 	overflow-y: auto;
@@ -151,7 +151,6 @@ ul.liste-lettres {
 	list-style-type: none;
 }
 #menu-logo{
-	background-color: #fff;
 }
 #menu-annexe {
 	margin: 0 20px;

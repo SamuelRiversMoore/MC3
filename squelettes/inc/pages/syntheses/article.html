@@ -1,0 +1,29 @@
+<BOUCLE_synthese(ARTICLES){id_article}>
+
+<div id="contenu" class="wrapper">
+	<div id="arbo"><a href="#URL_SITE_SPIP">#NOM_SITE_SPIP</a> > <a href="[(#INFO_URL{rubrique,24})]">#INFO_TITRE{rubrique,24}</a> > <span class="arbo-current-page">#TITRE</span></div>
+			
+				<section class="synthese page-standard">
+					
+						<article class="texte-courant">
+		
+							<h1>#TITRE</h1>
+							<h5>&nbsp;</h5>
+		
+							<div class="grid-2 cf">
+								<div>
+									<p class="discret">
+										— [(#DATE|affdate)]
+									</p>
+								</div>
+								<div>
+									<div class="big">#CHAPO</div>
+									#TEXTE
+								</div>
+							</div>
+		
+						</article>
+					
+				</section>
+		</div>
+</BOUCLE_synthese>

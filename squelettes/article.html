@@ -1,0 +1,21 @@
+<BOUCLE_article(ARTICLES){id_article}>
+<!DOCTYPE HTML>
+<html>
+<INCLURE{fond=inc/header, inc}>
+	<body>
+	
+	<!-- si c'est un article du journal -->
+	[(#ID_RUBRIQUE|=={8}|ou{#ID_RUBRIQUE|=={9}}|oui) <INCLURE{fond=inc/menu, id_rubrique=2}> <INCLURE{fond=inc/pages/journal/article, id_article}> ]
+	
+	<!-- si c'est un article des synthèses -->
+	<BOUCLE_rubrique(RUBRIQUES){id_rubrique}{tout}>
+		<BOUCLE_papa(RUBRIQUES){id_enfant}{tout}>
+			[(#ID_RUBRIQUE|=={24}|oui) <INCLURE{fond=inc/menu, id_rubrique=24}> <INCLURE{fond=inc/pages/syntheses/article, id_article}> ]
+		</BOUCLE_papa>
+	</BOUCLE_rubrique>
+			
+	<INCLURE{fond=inc/footer}>
+	
+	</body>
+</html>
+</BOUCLE_article>

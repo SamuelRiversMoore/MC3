@@ -1,0 +1,24 @@
+	<nav id="arbo">
+		<a href="#URL_SITE_SPIP">MC3</a> > 
+		
+		<BOUCLE_inventaire(RUBRIQUES){id_rubrique=3}{tout}>
+			<a href="#URL_RUBRIQUE">#TITRE</a> > 
+		</BOUCLE_inventaire>
+				
+		<BOUCLE_pays(PAYS){id_pay}>
+			[(#ENV{id_ville}|oui)<a href="#URL_PAY">]
+                #NOM_FR
+            [</a> (#ENV{id_ville}|oui) > ] 
+		</BOUCLE_pays>
+		
+		<BOUCLE_villes(VILLES){id_ville}>
+			[(#ENV{id_projet}|oui)<a href="#URL_VILLE">]
+                #NOM_FR
+            [</a> (#ENV{id_projet}|oui) > ]
+		</BOUCLE_villes>
+		
+		<BOUCLE_projets(PROJETS){id_projet}>
+			#TITRE_FR
+		</BOUCLE_projets>
+		
+	</nav>

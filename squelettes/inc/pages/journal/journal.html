@@ -1,0 +1,27 @@
+<B_journal>
+	<section class="cf journal">
+	<h5>— Articles</h5>
+	
+			<BOUCLE_journal(ARTICLES){id_rubrique=8}{par date}{inverse}>
+				<article class="cf journal extrait">
+					<a href="#URL_ARTICLE">
+						<BOUCLE_document(DOCUMENTS){id_article}{extension==jpg|png|gif}{0,1}>
+							<figure>
+								<img class="article-icone" src="[(#FICHIER|image_passe_partout{225,315}|image_recadre{225,315,'center center','#ffffff'}|extraire_attribut{src})]" />
+							</figure>
+						</BOUCLE_document>
+						<div>
+							<h4>#TITRE</h4>
+							<div class="medium">#CHAPO</div>
+							<div class="discret">
+								— [(#DATE|affdate)], par 
+								<BOUCLE_auteur(AUTEURS){id_article}>
+									#NOM
+								</BOUCLE_auteur>
+							</div>
+						</div>
+					</a>
+				</article>
+			</BOUCLE_journal>
+	</section>
+</B_journal>

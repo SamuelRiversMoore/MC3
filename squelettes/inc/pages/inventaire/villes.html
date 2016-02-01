@@ -1,0 +1,68 @@
+
+<BOUCLE_villes(VILLES){id_ville}>
+<div id="contenu" class="wrapper">
+
+	<INCLURE{fond=inc/pages/inventaire/ariane, id_pay, id_ville}>
+	
+	<h1>#NOM_FR</h1>
+	
+	<!-- inclusion thematiques -->
+	<INCLURE{fond=inc/pages/inventaire/thematiques, id_ville}>
+	
+        <B_projets>
+            <section id="ville-projet">
+                <h5>— Projets</h5>
+                <BOUCLE_projets(PROJETS){id_ville}>
+                    <a href="#URL_PROJET">
+                        <article>
+                            <h2><span>#TITRE_FR</span></h2>
+                                <?php $url = ''; ?>
+                                <BOUCLE_images(DOCUMENTS){id_projet}{extension==jpg|png|gif}{0,1}{par num titre}>
+                                    <?php $url = '[(#FICHIER|image_passe_partout{390,265}|image_recadre{390,265}|extraire_attribut{src})]'; ?>
+                                </BOUCLE_images>
+                                <figure style="background-image: url('/<?= $url ?>');">
+                                </figure>
+                            [<section>(#DESCRIPTION_FR|couper{160})</section>]
+                        </article>
+                    </a>
+                </BOUCLE_projets>
+            </section>
+        </B_projets>
+
+	<BOUCLE_test_projets(PROJETS){id_ville}{longitude != ''}{0,1}>
+		<div id="inventaire-carte">
+			<h5>— Carte des projets</h5>
+			<div id="inventaire-mapbox"></div>
+		</div>
+	</BOUCLE_test_projets>
+			
+
+</div>
+
+
+<script type="text/javascript">
+	
+	var maxZoom = 12;
+	
+	var geojson = [
+		<BOUCLE_projets_carte(PROJETS){id_ville}{longitude != ''}>
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [[(#LONGITUDE)], [(#LATITUDE)]]
+			},
+			"properties": {
+				"title": "#TITRE_FR",
+				"marker-color": "#FFDB16",
+				"marker-size": "medium",
+				"url": "#URL_PROJET"
+			}
+		},
+		</BOUCLE_projets_carte>
+		
+	];
+</script>
+
+
+</BOUCLE_villes>

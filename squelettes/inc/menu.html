@@ -1,0 +1,24 @@
+<span id="show-menu" class="glyphicon glyphicon-menu-hamburger">Menu</span>
+
+<div id="menu">
+	<span id="close-menu" class="glyphicon glyphicon-remove"></span>
+	<div id="menu-logo">
+		<a href="#URL_SITE_SPIP"><img src="squelettes/assets/images/logo-mc3.svg" width="320" height="95" alt="homepage logo"></a>
+	</div>
+	
+	<ul id="menu-annexe" class="cf">
+		<li><a href="[(#SELF|parametre_url{lang,fr})]">FR</a></li>
+		<li><a href="[(#SELF|parametre_url{lang,en})]">EN</a></li>
+		<li>Crédits</li>
+	</ul>
+	
+	<ul id="menu-principal">
+		<BOUCLE_menu(RUBRIQUES){tout}{racine}{par num titre}>
+			<li [(#EXPOSE|=={on}|oui) class="active"]>
+				<a href="#URL_RUBRIQUE" title="#TITRE">#TITRE</a>
+				<!-- inventaire qui déplie-->
+				[(#EXPOSE|=={on}|et{#ID_RUBRIQUE|=={3}}|oui) <INCLURE{fond=inc/pages/inventaire/menu, id_pay, id_ville, id_projet}>]
+			</li>
+		</BOUCLE_menu>
+	</ul>
+</div>

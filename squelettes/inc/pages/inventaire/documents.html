@@ -1,0 +1,32 @@
+<BOUCLES_documents(DOCUMENTS){id_chapitre?}{id_thematique?}{par num titre}>
+	<section class="thematique-document">
+		
+		<div class="thematique-document-fichiers">
+            <a href="#URL_DOCUMENT" class="fichier #EXTENSION" target="_blank">
+                <div class="titre-doc">[(#TITRE|sinon{Sans titre})]</div>
+            </a>
+        </div>
+		
+		<h4 class="medium">[(#TITRE|sinon{Sans titre})]</h4>
+		
+			[<div class="thematique-document-meta">
+				<p class="discret">
+					(#AUTEUR)<br />
+                    [(#DATE_DOCUMENT)]
+                    [<br /><span class="small">(#REFERENCE|sinon{#FICHIER|basename})</span>]
+				</p>
+			</div>]
+			
+			<div class="thematique-document-description">
+				[(#DESCRIPTIF|liens_ouvrants)]
+			</div>
+        
+            [<div class="thematique-document-meta">
+				<p class="discret">
+					(#AUTEUR_RESUME)<br />
+                    [(#DATE_RESUME)]
+				</p>
+			</div>]
+			
+	</section>
+</BOUCLES_documents>

@@ -1,0 +1,20 @@
+<B_nouvelles>
+	<section class="cf nouvelles">
+			<h5>— Nouvelles</h5>
+			<BOUCLE_nouvelles(ARTICLES){id_rubrique=9}{par date}{inverse}>
+                <a href="#URL_ARTICLE">
+                    <article>
+
+                        <h4>#TITRE</h4>
+                        <div>#CHAPO</div>
+                        <div class="discret">
+                                — [(#DATE|affdate)], par 
+                                <BOUCLE_auteur(AUTEURS){id_article}>
+                                    #NOM
+                                </BOUCLE_auteur>
+                        </div>
+                    </article>
+                </a>
+			</BOUCLE_nouvelles>
+	</section>
+</B_nouvelles>

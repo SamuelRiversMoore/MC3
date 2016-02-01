@@ -1,0 +1,59 @@
+<BOUCLE_rubrique(RUBRIQUES){id_rubrique}{tout}>
+	<div id="contenu" class="wrapper">
+		<div id="arbo"><a href="#URL_SITE_SPIP">#NOM_SITE_SPIP</a> > <span class="arbo-current-page">#TITRE</span></div>
+		
+		<h1>#TITRE</h1>
+		
+			
+				<section>
+					
+					<div class="tabs-wrapper cf">
+					
+						<B_rubriques>
+							<nav id="nav-tabs" class="gauche">
+								<ul>
+									<BOUCLE_rubriques(RUBRIQUES){id_parent}{tout}{par num titre}>
+										<li><a href="#tab-#ID_RUBRIQUE">#TITRE</a></li>
+									</BOUCLE_rubriques>
+								</ul>
+								<footer id="topButton">
+									<span class="discret glyphicon glyphicon-arrow-up"></span>
+									<span class="discret"> Remonter</span>
+								</footer>
+
+							</nav>
+						</B_rubriques>
+						
+						<BOUCLE_liste(RUBRIQUES){id_parent}{par num titre}>
+							<div>
+								<div class="cible" id="tab-#ID_RUBRIQUE"></div>
+                                <article class="tab texte-courant">
+                                    <h2>#TITRE</h2>
+                                    <p>#DESCRIPTION</p>
+                                    <h5>— Articles</h5>
+                                    <ul class="syntheses">
+                                        <BOUCLE_article(ARTICLES){id_rubrique}{par num titre}>
+                                            <a href="#URL_ARTICLE">
+                                                <li class="synthese">
+                                                    <h3>#TITRE</h3>
+                                                    #CHAPO
+                                                    <div class="discret">
+                                                            — [(#DATE|affdate)], par 
+                                                            <BOUCLE_auteur(AUTEURS){id_article}>
+                                                                #NOM
+                                                            </BOUCLE_auteur>
+                                                    </div>
+                                                </li>
+                                            </a>
+                                        </BOUCLE_article>
+                                    </ul>
+                                </article>
+                            </div>
+						</BOUCLE_liste>
+						
+					</div>
+				</section>
+				
+
+	</div>
+</BOUCLE_rubrique>

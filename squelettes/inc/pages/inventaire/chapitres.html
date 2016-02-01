@@ -1,0 +1,27 @@
+<B_chapitres_nav>
+	<nav class="thematique-sommaire">
+	
+		<header>
+			<h5>— Sommaire</h5>
+		</header>
+		
+		<ul class="liste-lettres">
+			<BOUCLE_chapitres_nav(CHAPITRES){id_thematique}{par num titre_fr}>
+				<li class="medium"><a href="#chapitre#ID_CHAPITRE">[(#TITRE_FR|supprimer_numero)]</a></li>
+			</BOUCLE_chapitres_nav>
+		</ul>
+	</nav>
+</B_chapitres_nav>
+
+<BOUCLE_chapitres(CHAPITRES){id_thematique}{par num titre_fr}>
+	<!-- .thematique-chapitre se repète pour chaque chapitre de la thématique -->
+	<h5>&nbsp;</h5>
+	<section class="thematique-chapitre" id="chapitre#ID_CHAPITRE">
+	
+		<h2>[(#TITRE_FR|supprimer_numero)]</h2>
+		[(#TEXTE_FR|liens_ouvrants)]
+		
+		<INCLURE{fond=inc/pages/inventaire/documents, id_chapitre}>
+		
+	</section>
+</BOUCLE_chapitres>

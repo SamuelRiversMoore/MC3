@@ -1,0 +1,26 @@
+  <div id="contenu" class="accueil">
+		<div id="welcome-map"></div>
+		<div class="wrapper cf">
+			<div class="col60">
+				<INCLURE{fond=inc/pages/journal/journal}>
+			</div>
+			<div class="col40">
+			
+				<div id="presentation" class="medium strong">
+					<BOUCLE_presentation(ARTICLES){id_article=1}>
+							#TEXTE
+					</BOUCLE_presentation>
+				</div>
+
+				
+				<div>
+					<div class="col60">
+						<INCLURE{fond=inc/pages/journal/nouvelles}>
+					</div>
+					<div class="col40">
+						<INCLURE{fond=inc/pages/accueil/maj}>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>

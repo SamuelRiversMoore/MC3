@@ -1,0 +1,64 @@
+
+<BOUCLE_projets(PROJETS){id_projet}>
+<div id="contenu" class="wrapper">
+
+	<INCLURE{fond=inc/pages/inventaire/ariane, id_pay, id_ville, id_projet}>
+	
+	<h1>#TITRE_FR</h1>
+	
+	[<div id="inventaire-introduction">
+		<h5>— Introduction</h5>
+		(#DESCRIPTION_FR)
+	</div>]
+	
+	<B_images>
+		<div id="inventaire-images">
+			<h5>— Images</h5>
+			<div class="slider-wrapper">
+				<div class="slider">
+					<BOUCLE_images(DOCUMENTS){id_projet}{extension==jpg|png|gif}{par num titre}>
+						<figure>
+							<span class="repere"></span>
+							<img src="[(#FICHIER|image_reduire{1200,1000}|extraire_attribut{src})]"/>
+						</figure>
+					</BOUCLE_images>
+				</div>
+			</div>
+			<div class="slick-zoom">zoom</div>
+		</div>
+	</B_images>
+	
+	<!-- inclusion thematiques -->
+	<INCLURE{fond=inc/pages/inventaire/thematiques, id_projet}>
+
+	<div id="inventaire-carte" class="projet">
+		<h5>— Situation géographique</h5>
+		<div id="inventaire-mapbox"></div>
+	</div>
+
+</div>
+<script type="text/javascript">
+
+	var maxZoom = 14;
+	
+	var geojson = [
+		<BOUCLE_projets_carte(PROJETS){id_projet}{longitude != ''}>
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [[(#LONGITUDE)], [(#LATITUDE)]]
+			},
+			"properties": {
+				"title": "#TITRE_FR",
+				"marker-color": "#FFDB16",
+				"marker-size": "medium",
+				"url": "#URL_PROJET"
+			}
+		},
+		</BOUCLE_projets_carte>
+		
+	];
+</script>
+
+</BOUCLE_projets>

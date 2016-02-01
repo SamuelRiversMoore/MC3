@@ -1,0 +1,9 @@
+<B_projets>
+	<ul class="villes">
+		<BOUCLE_projets(PROJETS){statut=publie}{id_ville}>
+			<li [(#EXPOSE|=={on}|oui) class="active"]>
+				<span class="arbo-lien">#ENV{lien_parent}[(#COMPTEUR_BOUCLE|=={#TOTAL_BOUCLE}|?{'&nbsp;└','&nbsp;├'})]</span><a class="arbo-nom" href="#URL_PROJET" title="#TITRE_FR">&nbsp;#TITRE_FR</a>
+			</li>
+		</BOUCLE_projets>
+	</ul>
+</B_projets>

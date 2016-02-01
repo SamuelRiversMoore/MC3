@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html>
+<INCLURE{fond=inc/header, inc}>
+	<body>
+	
+	<BOUCLE_villes(VILLES projets_liens){id_projet}>
+		<BOUCLE_pays(PAYS villes_liens){id_ville}>
+			<INCLURE{fond=inc/menu, id_rubrique=3, id_pay, id_ville, id_projet}>
+			<INCLURE{fond=inc/pages/inventaire/projets, id_ville, id_pay, id_projet}>
+		</BOUCLE_pays>
+
+	</BOUCLE_villes>
+			
+	<INCLURE{fond=inc/footer}>
+	
+	</body>
+</html>

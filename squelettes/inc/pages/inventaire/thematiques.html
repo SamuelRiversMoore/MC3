@@ -1,0 +1,45 @@
+<B_thematiques>
+
+	<section id="inventaire-thematiques">
+		
+		<div id="inventaire-tabs" class="tabs-wrapper cf">
+		
+			<B_thematiques_nav>
+				<nav id="nav-tabs" class="gauche">
+					<header>
+						<h5>— Thématiques</h5>
+					</header>
+					<ul>
+						<BOUCLE_thematiques_nav(THEMATIQUES){id_pay?}{id_ville?}{id_projet?}{par num titre_fr}>
+						<li><a href="#tab-#ID_THEMATIQUE">[(#TITRE_FR|supprimer_numero)]</a></li>
+						</BOUCLE_thematiques_nav>
+					</ul>
+					<footer id="topButton">
+						<span class="discret glyphicon glyphicon-arrow-up"></span>
+						<span class="discret"> Remonter</span>
+					</footer>
+				</nav>
+			</B_thematiques_nav>
+			
+			<BOUCLE_thematiques(THEMATIQUES){id_pay?}{id_ville?}{id_projet?}{par num titre_fr}>
+				<div>
+					<div class="cible" id="tab-#ID_THEMATIQUE"></div>
+					<article class="tab">
+					
+						<!-- .thematique-intro est optionnel -->
+						<section class="thematique-intro">
+							[(#TEXTE_FR|liens_ouvrants)]
+						</section>
+						
+						<INCLURE{fond=inc/pages/inventaire/documents, id_thematique}>
+						
+						<INCLURE{fond=inc/pages/inventaire/chapitres, id_thematique}>
+						
+					</article>
+				</div>
+			</BOUCLE_thematiques>
+			
+		</div>
+	</section>
+	
+</B_thematiques>

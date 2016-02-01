@@ -1,0 +1,11 @@
+<B_villes>
+	<ul class="villes">
+		<BOUCLE_villes(VILLES){statut=publie}{id_pay}{par nom_fr}>
+			<li [(#EXPOSE|=={on}|oui) class="active"]>
+				<span class="arbo-lien">#ENV{lien_parent}[(#COMPTEUR_BOUCLE|=={#TOTAL_BOUCLE}|?{'&nbsp;└','&nbsp;├'})]</span><a class="arbo-nom" href="#URL_VILLE" title="#NOM_FR">&nbsp;#NOM_FR</a>
+				[(#COMPTEUR_BOUCLE|=={#TOTAL_BOUCLE}|?{ #SET{lien_parent, #ENV{lien_parent}&nbsp;&nbsp;},#SET{lien_parent, #ENV{lien_parent}&nbsp;|} })]
+				[(#EXPOSE|=={on}|oui) <INCLURE{fond=inc/pages/inventaire/menu_projets, id_pay, id_ville, id_projet}{lien_parent=#GET{lien_parent}}>]
+			</li>
+		</BOUCLE_villes>
+	</ul>
+</B_villes>

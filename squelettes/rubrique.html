@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<INCLURE{fond=inc/header, inc}>
+	<body>
+	<INCLURE{fond=inc/menu, id_rubrique}>
+		
+	<!-- accueil -->
+	[(#ID_RUBRIQUE|=={1}|oui) <INCLURE{fond=inc/pages/accueil}> ]	
+	
+	<!-- journal -->
+	[(#ID_RUBRIQUE|=={2}|oui) <INCLURE{fond=inc/pages/journal, id_rubrique}> ]
+	
+	<!-- inventaire -->
+	[(#ID_RUBRIQUE|=={3}|oui) <INCLURE{fond=inc/pages/inventaire}> ]
+	
+	<!-- synthèses -->
+	[(#ID_RUBRIQUE|=={24}|oui) <INCLURE{fond=inc/pages/syntheses, id_rubrique}> ]
+
+	<!-- lexique -->
+	[(#ID_RUBRIQUE|=={5}|oui) <INCLURE{fond=inc/pages/lexique, id_rubrique}> ]
+
+	<!-- réseau -->
+	[(#ID_RUBRIQUE|=={6}|oui) <INCLURE{fond=inc/pages/reseau, id_rubrique}> ]
+	
+	<!-- à propos -->
+	[(#ID_RUBRIQUE|=={7}|oui) <INCLURE{fond=inc/pages/apropos, id_rubrique}> ]
+	
+
+	
+	
+			
+	<INCLURE{fond=inc/footer}>
+	
+	</body>
+</html>

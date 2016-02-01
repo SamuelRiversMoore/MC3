@@ -1,0 +1,44 @@
+<BOUCLE_rubrique(RUBRIQUES){id_rubrique}{tout}{par num titre}>
+	<div id="contenu" class="wrapper">
+		<div id="arbo"><a href="#URL_SITE_SPIP">#NOM_SITE_SPIP</a> > <span class="arbo-current-page">#TITRE</span></div>
+		
+		<h1>#TITRE</h1>
+		
+			
+				<section class="reseaux">
+					
+					<div class="tabs-wrapper cf">
+					
+						<B_rubriques>
+							<nav id="nav-tabs" class="gauche">
+								<ul>
+									<BOUCLE_rubriques(RUBRIQUES){id_parent=6}{tout}{par num titre}>
+										<li><a href="#tab-#ID_RUBRIQUE">#TITRE</a></li>
+									</BOUCLE_rubriques>
+								</ul>
+								<footer id="topButton">
+									<span class="discret glyphicon glyphicon-arrow-up"></span>
+									<span class="discret"> Remonter</span>
+								</footer>
+							</nav>
+						</B_rubriques>
+						
+						<BOUCLE_liste(RUBRIQUES){id_parent=6}{par num titre}>
+							<div>
+								<div class="cible" id="tab-#ID_RUBRIQUE"></div>
+									<article class="tab">
+										<INCLURE{fond=inc/pages/reseau/liste, id_rubrique}>
+										<BOUCLE_sous_liste(RUBRIQUES){id_parent}{par num titre}>
+											<h2>#TITRE</h2>
+											<INCLURE{fond=inc/pages/reseau/liste, id_rubrique}>
+										</BOUCLE_sous_liste>
+									</article>
+								</div>
+						</BOUCLE_liste>
+						
+					</div>
+				</section>
+				
+
+	</div>
+</BOUCLE_rubrique>
